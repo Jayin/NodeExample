@@ -1,0 +1,305 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"string",
+				"querystring.decode(qs, sep, eq);"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "acty/server.js",
+			"settings":
+			{
+				"buffer_size": 735,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "acty/requestHandlers.js",
+			"settings":
+			{
+				"buffer_size": 955,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "acty/router.js",
+			"settings":
+			{
+				"buffer_size": 420,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "acty/index.js",
+			"settings":
+			{
+				"buffer_size": 297,
+				"line_ending": "Windows",
+				"name": "var server  = require(\"./server\");"
+			}
+		}
+	],
+	"build_system": "Packages/User/node-dev.sublime-build",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 328.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/app/1/ETipsproject/adminShowTopic.php",
+		"/E/app/1/ETipsproject/index.html",
+		"/E/app/1/ETipsproject/getcomment.php",
+		"/E/nodeWorkPlace/mytest/acty/requestHandlers",
+		"/E/nodeWorkPlace/mytest/server.js",
+		"/E/nodeWorkPlace/mytest/route.js",
+		"/C/Users/Lenovo/AppData/Roaming/Sublime Text 2/Packages/Nodejs/Nodejs.sublime-settings",
+		"/C/Users/Lenovo/AppData/Roaming/Sublime Text 2/Packages/User/node-dev.sublime-build",
+		"/E/Sublime Text Build 3047 x64/Data/Packages/nodejs/SublimeText-Nodejs-master/Nodejs.sublime-settings",
+		"/E/Sublime Text Build 3047 x64/Data/Packages/nodejs/SublimeText-Nodejs-master/Default (Windows).sublime-keymap",
+		"/E/Sublime Text Build 3047 x64/Data/Packages/nodejs/SublimeText-Nodejs-master/Default.sublime-commands",
+		"/E/nodejspluin/SublimeText-Nodejs-master/Nodejs.sublime-settings",
+		"/D/project3/反编译后文件/超级课程表4.3/res/xml/widget_provider_4_2.xml",
+		"/D/project3/反编译后文件/超级课程表4.3/res/xml/widget_provider_4_1.xml",
+		"/D/project3/反编译后文件/超级课程表4.3/res/xml/widget_provider_4_3.xml"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "acty/server.js",
+					"settings":
+					{
+						"buffer_size": 735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								309,
+								276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "acty/requestHandlers.js",
+					"settings":
+					{
+						"buffer_size": 955,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								782,
+								782
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "acty/router.js",
+					"settings":
+					{
+						"buffer_size": 420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "acty/index.js",
+					"settings":
+					{
+						"buffer_size": 297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"auto_name": "var server  = require(\"./server\");",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 219.0,
+	"status_bar_visible": true
+}
