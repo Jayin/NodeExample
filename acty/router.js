@@ -1,7 +1,7 @@
-function route(handlers,pathname,response,postData){
+function route(handlers,pathname,response,request){
   console.log("About to route a request for " + pathname);
    if(typeof handlers[pathname] === "function"){
-   	 handlers[pathname](response,postData);
+   	 handlers[pathname](response,request);
    }else{
    	   console.log("404 page not find!");
    	   response.writeHead(404,{"Content-Type":"text/html"});
