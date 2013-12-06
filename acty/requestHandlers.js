@@ -1,6 +1,7 @@
 var querystring = require("querystring"),
     fs = require("fs"),
-    formidable = require("formidable");
+    formidable = require("formidable"),
+    util = require("util");
 
 function start(response, request) {
     var body = '<html>' +
@@ -30,11 +31,22 @@ function upload(response, request) {
     form.parse(request, function(err, fieds, files) {
         console.log("parse done");
         console.log(files);
-        fs.renameSync(files.upload.path, "./tmp/test.png");
-            response.writeHead(200, {"Content-Type": "text/html"});
-    response.write("received image:<br/>");
-    response.write("<img src='/show' />");
-    response.end();
+        var readStream = fs.createReadStream(files.upload.path);
+
+        var writeStream = fs.createWriteStream("./tmp/test.png");
+
+        util.pump(readStream, writeStream, function() {
+
+            fs.unlinkSync(files.upload.path);
+
+        });
+      //  fs.renameSync(files.upload.path, "./tmp/test.png");
+        response.writeHead(200, {
+            "Content-Type": "text/html"
+        });
+        response.write("received image:<br/>");
+        response.write("<img src='/show' />");
+        response.end();
 
     });
 
