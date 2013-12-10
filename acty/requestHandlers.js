@@ -1,7 +1,10 @@
 var querystring = require("querystring"),
     fs = require("fs"),
     formidable = require("formidable"),
-    util = require("util");
+    util = require("util")
+url = require("url");
+
+var request = require('request');
 
 function start(response, request) {
     var body = '<html>' +
@@ -28,19 +31,19 @@ function upload(response, request) {
     console.log("upload!");
     var form = formidable.IncomingForm();
     console.log("about to parese");
-    form.parse(request, function(err, fieds, files) {
+    form.parse(request, function (err, fieds, files) {
         console.log("parse done");
         console.log(files);
         var readStream = fs.createReadStream(files.upload.path);
 
         var writeStream = fs.createWriteStream("./tmp/test.png");
 
-        util.pump(readStream, writeStream, function() {
+        util.pump(readStream, writeStream, function () {
 
             fs.unlinkSync(files.upload.path);
 
         });
-      //  fs.renameSync(files.upload.path, "./tmp/test.png");
+        //  fs.renameSync(files.upload.path, "./tmp/test.png");
         response.writeHead(200, {
             "Content-Type": "text/html"
         });
@@ -54,7 +57,7 @@ function upload(response, request) {
 
 function show(response, request) {
     console.log("Request handler 'show' was called.");
-    fs.readFile("./tmp/test.png", "binary", function(error, file) {
+    fs.readFile("./tmp/test.png", "binary", function (error, file) {
         if (error) {
             response.writeHead(500, {
                 "Content-Type": "text/plain"
@@ -70,6 +73,37 @@ function show(response, request) {
         }
     });
 }
+/**
+ * querystring.parse('foo=bar&baz=qux&baz=quux&corge')
+ // returns
+ { foo: 'bar', baz: ['qux', 'quux'], corge: '' }
+ */
+function getQueryString(req) {
+    return querystring.parse(url.parse(req.url).query);
+}
+
+function fetch(response, req) {
+    var baseURL = 'http://www.';
+
+    _endtity = getQueryString(req);
+
+    if (!_endtity.req) {
+        baseURL = 'http://www.wyu.cn/news/default.asp?page=1';
+    } else {
+        baseURL = baseURL + _endtity.req; //req get the URL that you want to fetch
+    }
+
+    request(baseURL, function (error, res, body) {
+        if (!error && res.statusCode == 200) {
+            console.log(body) // Print the google web page.
+            response.writeHead(200, {"Content-Type": "text/html"});
+            buffer = new Buffer()
+            response.write(body);
+            response.end();
+        }
+    })
+}
 exports.start = start;
 exports.upload = upload;
 exports.show = show;
+exports.fetch = fetch;

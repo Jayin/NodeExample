@@ -3,7 +3,7 @@ function route(handlers,pathname,response,request){
    if(typeof handlers[pathname] === "function"){
    	 handlers[pathname](response,request);
    }else{
-   	   console.log("404 page not find!");
+   	   //console.log("404 page not find!");
    	   response.writeHead(404,{"Content-Type":"text/html"});
        response.write("404 page not find!");
        response.end();  
