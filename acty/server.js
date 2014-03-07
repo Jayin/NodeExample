@@ -10,11 +10,6 @@ function start(route, handlers) {
     var _url = request.url;
     var pathname = url.parse(_url).pathname;
     route(handlers, pathname, response,request);
- 
-
-  
-   
- 
 
   }
   http.createServer(onReciver).listen(port);

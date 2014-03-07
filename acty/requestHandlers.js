@@ -1,9 +1,10 @@
 var querystring = require("querystring"),
     fs = require("fs"),
     formidable = require("formidable"),
-    util = require("util")
+    util = require("util"),
 url = require("url");
 
+var iconv = require('iconv-lite');
 var request = require('request');
 
 function start(response, request) {
@@ -95,10 +96,17 @@ function fetch(response, req) {
 
     request(baseURL, function (error, res, body) {
         if (!error && res.statusCode == 200) {
-            console.log(body) // Print the google web page.
+
             response.writeHead(200, {"Content-Type": "text/html"});
-            buffer = new Buffer()
-            response.write(body);
+            if(iconv.encodingExists("gb2312")){
+                    var newBody =iconv.decode(body,'gb2312');
+
+                  console.log(_newBodyBuffer.toString());
+                  response.write(_newBodyBuffer.toString());
+
+            }else{
+                response.write("not support this !");
+            }
             response.end();
         }
     })
